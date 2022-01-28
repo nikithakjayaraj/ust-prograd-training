@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String inputString = in.nextLine();
+        inputString = inputString.replaceAll("\\s+", "");
+        double col = Math.ceil(Math.pow(inputString.length(),0.5));
+        String answer ="";
+        for(int i=0;i<col;i++){
+            int j=0;
+            while(i+j<inputString.length()){
+                answer = answer + inputString.substring(i+j,i+j+1);
+                j=(int) (j+col);}
+            answer = answer + " ";}
+        System.out.println(answer);
+    }
+}
